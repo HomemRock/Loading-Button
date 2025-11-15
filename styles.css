@@ -1,0 +1,90 @@
+@keyframes rodaragora {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes meufundinho {
+    0% {
+        background-color: #e2e2e2;
+    }
+    25% {
+        background-color: red;
+    }
+    50% {
+        background-color: purple;
+    }
+    75% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: greenyellow;
+    }
+}
+
+@keyframes escobedoaparecendo {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100px;
+    }
+}
+
+body {
+    height: 100vh;
+    background-image: url(Wave\ to\ Earth.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sejameubotao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.meubotao {
+    height: 56px;
+    width: 256px;
+    background-color: #e2e2e2;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 12px;
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: meufundinho 4s linear forwards;
+    animation-delay: 2s;
+}
+
+.minharodela {
+    height: 25px;
+    width: 25px;
+
+    border: 3px white solid;
+    border-radius: 15px;
+    border-bottom-color: transparent;
+
+    animation: rodaragora 1s ease-in infinite;
+}
+
+.sejameubotao .escobedo {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    background-color: greenyellow;
+
+    animation: escobedoaparecendo 2s linear;
+    animation-delay: 4.7s;
+    animation-fill-mode: backwards;
+}
+
